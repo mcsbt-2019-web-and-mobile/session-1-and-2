@@ -93,9 +93,8 @@ Date:   Thu Dec 20 09:51:56 2018 +0100
 
 As you can see commits have four main components:
 
-<p class="fragment fade-in"> **hash** </p>
-<p class="fragment fade-in"> **author** </p>
-<p class="fragment fade-in"> **date** </p>
+<p class="fragment fade-in"> **hash** </p> <p class="fragment
+fade-in"> **author** </p> <p class="fragment fade-in"> **date** </p>
 <p class="fragment fade-in"> **message** </p>
 
 # Git commands
@@ -298,11 +297,48 @@ into another branch.
 
 ## exercise
 
-set up in pairs and do the following.
+1. Fork the `test-console-repository` repository in github from any of
+   your classmates.
+2. Add some changes to the readme.
+3. Push the changes to your fork.
+4. Create a pull request to your classmate's repository.
 
-One of you
+(if you receive a pull request in your repo, do not merge yet.)
 
 ## code reviews
+
+Code reviews are a vital part in the software development cycle.  With
+code reviews we validate that the code we're accepting in our project
+via a pull request is up to its standards.
+
+## code reviews
+
+In order to perform a code review we should go to the files changed
+part of the pull request:
+
+![files changed](./img/files-changed.png)
+
+## code reviews
+
+Code reviews are formed by comments.  We add comment by passing the
+cursor over the line number on the changes.
+
+![add-comment](./img/add-comment.png)
+
+## code reviews
+
+Then we add a meaningful comment.
+
+![comment](./img/comment.png)
+
+## code reviews
+
+And finally we submit the review.
+
+![submit-reviewg](./img/submit-review.png)
+
+## exercise. Performing a code review.
+
 ## Continuous integration
 
 
