@@ -16,7 +16,7 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="https://revealjs.com/css/theme/moon.css" id="theme">
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/solarized.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -47,8 +47,8 @@
 </section><section id="css-limits-sass-design-systems-1-session" class="slide level2">
 <h2>CSS limits, SASS, design systems (1 session)</h2>
 <p>We’ve already used CSS in the past. We’ll see some of its limitations and learn about SASS a tool for writing better CSS.</p>
-</section><section id="project-show-tell-1-session" class="slide level2">
-<h2>Project show &amp; tell (1 session)</h2>
+</section><section id="project-1-session" class="slide level2">
+<h2>Project (1 session)</h2>
 <p>In the last session we will introduce the project and we’ll also have time to work on it.</p>
 </section></section>
 <section id="plan-for-today" class="title-slide slide level1"><h1>Plan for today</h1><ul>
@@ -58,20 +58,18 @@
 <li>reviews</li>
 <li>continuous integration</li>
 </ul></section>
-<section><section id="git" class="title-slide slide level1"><h1>Git</h1></section><section id="section" class="slide level2">
-<h2></h2>
-</section><section id="git-1" class="slide level2">
+<section><section id="git" class="title-slide slide level1"><h1>git</h1></section><section id="git-1" class="slide level2">
 <h2>git</h2>
 <p>Git is a VCS that makes our lives easier when developing software. It allows us to:</p>
 <ul>
 <li>manage versions of the code</li>
 <li>collaborate with other peers in the same codebase</li>
 </ul>
-</section><section id="section-1" class="slide level2">
-<h2></h2>
+</section><section id="git-2" class="slide level2">
+<h2>git</h2>
 <p>There are several ways for interacting with git. Using UI clients (such as github desktop), or via the command line.</p>
 <p>Even though it might sound scary, we’ll use the command line in this course.</p>
-</section><section id="git-2" class="slide level2">
+</section><section id="git-3" class="slide level2">
 <h2>git</h2>
 <p>Git has some important concepts that we need to be used to:</p>
 <ul>
@@ -210,7 +208,10 @@ $ git add file3</code></pre>
 <li>push your code to the remote repository</li>
 </ol>
 </section></section>
-<section id="javascript" class="title-slide slide level1"><h1>Javascript</h1><p>In the previous course we used JS and run it in the browser. That’s not the only way we have for running Javascript. There’s another famous package for running JS in the server called NodeJS.</p></section>
+<section><section id="javascript" class="title-slide slide level1"><h1>Javascript</h1><p>In the previous course we used JS and run it in the browser. That’s not the only way we have for running Javascript. There’s another famous package for running JS in the server called NodeJS.</p></section><section id="nodejs" class="slide level2">
+<h2>NodeJS</h2>
+<p>install NodeJS from <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>.</p>
+</section></section>
 <section><section id="npm" class="title-slide slide level1"><h1>npm</h1></section><section id="npm-1" class="slide level2">
 <h2>npm</h2>
 <p>NPM is the task runner for NodeJS. What’s a task runner? a piece of software with which we can automate tasks and run it whenever we want.</p>
@@ -230,9 +231,15 @@ $ git add file3</code></pre>
 </section><section id="example-1" class="slide level2">
 <h2>example 1</h2>
 </section></section>
-<section><section id="software-lifecycle" class="title-slide slide level1"><h1>software lifecycle</h1></section><section id="pull-requests" class="slide level2">
-<h2>Pull requests</h2>
-<p>Pull requests are the mechanism used in github to get a branch merged into another branch.</p>
+<section id="software-lifecycle" class="title-slide slide level1"><h1>software lifecycle</h1></section>
+<section><section id="pull-requests" class="title-slide slide level1"><h1>pull requests</h1><p>Pull requests are the mechanism used in github to get a branch merged into another branch.</p></section><section id="pull-requests-1" class="slide level2">
+<h2>pull requests</h2>
+<p>In order to do pull requests we need to first push the our branch to the origin repository. Then, we go to the destination repository, and create a new pull request:</p>
+<p><img data-src="./img/create-pull-request.png" /></p>
+</section><section id="pull-requests-2" class="slide level2">
+<h2>pull requests</h2>
+<p>Then we select the target (base) and the origin (compare) branches.</p>
+<p><img data-src="./img/base-compare.png" /></p>
 </section><section id="exercise" class="slide level2">
 <h2>exercise</h2>
 <ol type="1">
@@ -242,37 +249,36 @@ $ git add file3</code></pre>
 <li>Create a pull request to your classmate’s repository.</li>
 </ol>
 <p>(if you receive a pull request in your repo, do not merge yet.)</p>
-</section><section id="code-reviews" class="slide level2">
-<h2>code reviews</h2>
-<p>Code reviews are a vital part in the software development cycle. With code reviews we validate that the code we’re accepting in our project via a pull request is up to its standards.</p>
-</section><section id="code-reviews-1" class="slide level2">
+</section></section>
+<section><section id="code-reviews" class="title-slide slide level1"><h1>code reviews</h1><p>Code reviews are a vital part in the software development cycle. With code reviews we validate that the code we’re accepting in our project via a pull request is up to its standards.</p></section><section id="code-reviews-1" class="slide level2">
 <h2>code reviews</h2>
 <p>In order to perform a code review we should go to the files changed part of the pull request:</p>
-<figure>
-<img data-src="./img/files-changed.png" alt="" /><figcaption>files changed</figcaption>
-</figure>
+<p><img data-src="./img/files-changed.png" /></p>
 </section><section id="code-reviews-2" class="slide level2">
 <h2>code reviews</h2>
 <p>Code reviews are formed by comments. We add comment by passing the cursor over the line number on the changes.</p>
-<figure>
-<img data-src="./img/add-comment.png" alt="" /><figcaption>add-comment</figcaption>
-</figure>
+<p><img data-src="./img/add-comment.png" /></p>
 </section><section id="code-reviews-3" class="slide level2">
 <h2>code reviews</h2>
 <p>Then we add a meaningful comment.</p>
-<figure>
-<img data-src="./img/comment.png" alt="" /><figcaption>comment</figcaption>
-</figure>
+<p><img data-src="./img/comment.png" /></p>
 </section><section id="code-reviews-4" class="slide level2">
 <h2>code reviews</h2>
 <p>And finally we submit the review.</p>
-<figure>
-<img data-src="./img/submit-review.png" alt="" /><figcaption>submit-review</figcaption>
-</figure>
+<p><img data-src="./img/submit-review.png" /></p>
 </section><section id="exercise.-performing-a-code-review." class="slide level2">
 <h2>exercise. Performing a code review.</h2>
-</section><section id="continuous-integration" class="slide level2">
-<h2>Continuous integration</h2>
+<p>Perform the code review on the pull request you received on the test-repository.</p>
+</section></section>
+<section><section id="continuous-integration" class="title-slide slide level1"><h1>continuous integration</h1></section><section id="continuous-integration-1" class="slide level2">
+<h2>continuous integration</h2>
+<p>Contiuous integration is another important part of SW lifecycle. With it, we ensure the quality of our software by automatically executing test (and performing other quality assurance tasks) periodically.</p>
+</section><section id="continuous-integration-2" class="slide level2">
+<h2>continuous integration</h2>
+<p>One of the most famous platforms for continuous integration is Travis-ci. You can integrate your project with Travis-ci with the following steps:</p>
+</section><section id="exercise-travis." class="slide level2">
+<h2>Exercise: Travis.</h2>
+<p>Follow the tutorial in https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci, and add travis-ci integration to your test-repository.</p>
 </section></section>
     </div>
   </div>

@@ -20,7 +20,7 @@ learn its concepts and how to structure applications with it.
 We've already used CSS in the past. We'll see some of its limitations
 and learn about SASS a tool for writing better CSS.
 
-## Project show & tell (1 session)
+## Project (1 session)
 
 In the last session we will introduce the project and we'll also have
 time to work on it.
@@ -33,9 +33,7 @@ time to work on it.
 - reviews
 - continuous integration
 
-# Git
-
-## 
+# git
 
 ## git
 
@@ -45,7 +43,7 @@ allows us to:
 - manage versions of the code
 - collaborate with other peers in the same codebase
 
-## 
+## git
 
 There are several ways for interacting with git.  Using UI clients
 (such as github desktop), or via the command line.
@@ -261,6 +259,10 @@ In the previous course we used JS and run it in the browser.  That's
 not the only way we have for running Javascript.  There's another
 famous package for running JS in the server called NodeJS.
 
+## NodeJS
+
+install NodeJS from [https://nodejs.org/en/](https://nodejs.org/en/).
+
 # npm
 
 ## npm
@@ -290,10 +292,24 @@ section.  They can be run with `npm run taskName`.
 
 # software lifecycle
 
-## Pull requests
+# pull requests
 
 Pull requests are the mechanism used in github to get a branch merged
 into another branch.
+
+## pull requests
+
+In order to do pull requests we need to first push the our branch to
+the origin repository.  Then, we go to the destination repository, and
+create a new pull request:
+
+![](./img/create-pull-request.png)
+
+## pull requests
+
+Then we select the target (base) and the origin (compare) branches.
+
+![](./img/base-compare.png)
 
 ## exercise
 
@@ -305,7 +321,7 @@ into another branch.
 
 (if you receive a pull request in your repo, do not merge yet.)
 
-## code reviews
+# code reviews
 
 Code reviews are a vital part in the software development cycle.  With
 code reviews we validate that the code we're accepting in our project
@@ -316,29 +332,48 @@ via a pull request is up to its standards.
 In order to perform a code review we should go to the files changed
 part of the pull request:
 
-![files changed](./img/files-changed.png)
+![](./img/files-changed.png)
 
 ## code reviews
 
 Code reviews are formed by comments.  We add comment by passing the
 cursor over the line number on the changes.
 
-![add-comment](./img/add-comment.png)
+![](./img/add-comment.png)
 
 ## code reviews
 
 Then we add a meaningful comment.
 
-![comment](./img/comment.png)
+![](./img/comment.png)
 
 ## code reviews
 
 And finally we submit the review.
 
-![submit-reviewg](./img/submit-review.png)
+![](./img/submit-review.png)
 
 ## exercise. Performing a code review.
 
-## Continuous integration
+Perform the code review on the pull request you received on the
+test-repository.
 
+# continuous integration
 
+## continuous integration
+
+Contiuous integration is another important part of SW lifecycle.  With
+it, we ensure the quality of our software by automatically executing
+test (and performing other quality assurance tasks) periodically.
+
+## continuous integration
+
+One of the most famous platforms for continuous integration is
+Travis-ci.  You can integrate your project with Travis-ci with the
+following steps:
+
+## Exercise: Travis.
+
+Follow the tutorial in
+https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci,
+and add travis-ci integration to your test-repository.
